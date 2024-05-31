@@ -1,0 +1,10 @@
+LISTA DE CAMBIOS:
+
+carpeta urls.py:
+
+from django.urls import re_path
+from django.views.static import serve
+from django.conf import settings
+from django.conf.urls.static import static
+
+    re_path(r'^media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT})
